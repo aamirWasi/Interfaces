@@ -20,6 +20,10 @@ namespace ConsoleApp1
             {
                 Console.WriteLine($"The {buick.Brand} can't driven");
             }
+            IElectronicDevice TV = TVRemote.GetDevice();
+            PowerButton powButt = new PowerButton(TV);
+            powButt.Execute();
+            powButt.Undo();
         }
     }
 }
